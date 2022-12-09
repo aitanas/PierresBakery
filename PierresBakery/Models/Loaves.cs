@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+
 namespace Bakery.Loaves
 {
   public class Bread
@@ -7,20 +9,30 @@ namespace Bakery.Loaves
     public Bread(int quantity)
     {
       Quantity = quantity;
+      Price = GetBreadPrice(quantity);
     }
 
     public int GetBreadPrice(int quantity) 
     {
-      int price = 0;
+      List<int> price = new List<int> {};
+      int totalPrice = 0;
       for (int i = 1; i <= quantity; i++)
       {
-        price += 5;
-        if (quantity % 3 == 0)
+        if (i % 3 == 0)
         {
-          price -= 5;
+          price.Add(0);
+        }
+        else
+        {
+          price.Add(5);
         }
       }
-      return price;
+
+      for (int j = 0; j < price.Count; j++)
+      {
+        totalPrice += price[j];
+      }
+      return totalPrice;
     }
   }
 }
