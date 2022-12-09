@@ -12,5 +12,13 @@ namespace Bakery.Tests
       Pastry croissant = new Pastry();
       Assert.AreEqual(typeof(Pastry), croissant.GetType());
     }
+
+    [TestMethod]
+    public void PastryConstructor_StoresUserSelection_Int()
+    {
+      int quantity = 5;
+      Pastry croissant = new Pastry(5);
+      Assert.AreEqual(quantity, croissant.Quantity);
+    }
   }
 }
