@@ -9,9 +9,18 @@ namespace Bakery.Loaves
       Quantity = quantity;
     }
 
-    public int GetBreadPrice() 
+    public int GetBreadPrice(int quantity) 
     {
-      return 10;
+      int price = 0;
+      for (int i = 1; i <= quantity; i++)
+      {
+        price += 5;
+        if (quantity % 3 == 0)
+        {
+          price -= 5;
+        }
+      }
+      return price;
     }
   }
 }
