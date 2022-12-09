@@ -21,10 +21,13 @@ namespace Bakery.Tests
       Assert.AreEqual(quantity, croissant.Quantity);
     }
 
+    [TestMethod]
     public void GetPastryPrice_ReturnsTotalCostOfPastries_Int()
+    {
       int quantity = 5;
       Pastry croissant = new Pastry(5);
       int price = 9;
       Assert.AreEqual(price, croissant.Price);
+    }
   }
 }
