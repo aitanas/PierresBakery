@@ -1,13 +1,11 @@
-using System.Collections.Generic;
 using Bakery.Prices;
 
 namespace Bakery.Pastries
 {
   public class Pastry : Pricing
   {
-    public int Price;
     public int Quantity;
-
+    public int Price;
     public Pastry(int quantity)
     {
       Quantity = quantity;
