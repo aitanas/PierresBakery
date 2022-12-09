@@ -12,5 +12,12 @@ namespace Bakery.Tests
       Bread challah = new Bread();
       Assert.AreEqual(typeof(Bread), challah.GetType());
     }
+
+    public void BreadConstructor_ReturnsUserSelection_Int()
+    {
+      int quantity = 3;
+      Bread challah = new Bread(quantity);
+      Assert.AreEqual(quantity, challah.Quantity);
+    }
   }
 }
