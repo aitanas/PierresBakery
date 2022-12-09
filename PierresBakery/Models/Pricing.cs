@@ -1,12 +1,9 @@
 using System.Collections.Generic;
 
-namespace Bakery.Pricing
+namespace Bakery.Prices
 {
   public class Pricing
   {
-    public int Price;
-    public int Quantity;
-
     public int GetTotalPrice(int quantity, int discCost, int regCost)
     {
       List<int> bakeryReceipt = new List<int> {};

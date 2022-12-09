@@ -21,6 +21,10 @@ namespace Bakery
       Console.WriteLine("Would you like to purchase any baked goods today? (Y/N)");
       string userResponse = Console.ReadLine();
       userResponse.ToUpper();
+      int breadCost = 5;
+      int breadDiscCost = 0;
+      int pastryCost = 2;
+      int pastryDiscCost = 1;
 
       if (userResponse.Contains("Y"))
       {
@@ -28,14 +32,14 @@ namespace Bakery
         string strBreadQuantity = Console.ReadLine();
         int breadQuantity = int.Parse(strBreadQuantity);
         Bread breadOrder = new Bread(breadQuantity);
-        int breadPrice = breadOrder.GetBreadPrice(breadQuantity);
+        int breadPrice = breadOrder.GetTotalPrice(breadQuantity, breadDiscCost, breadCost);
         Console.WriteLine("Your bread total is ${0}.", breadPrice);
         
         Console.WriteLine("How many pastries would you like?");
         string strPastryQuantity = Console.ReadLine();
         int pastryQuantity = int.Parse(strPastryQuantity);
         Pastry pastryOrder = new Pastry(pastryQuantity);
-        int pastryPrice = pastryOrder.GetPastryPrice(pastryQuantity);
+        int pastryPrice = pastryOrder.GetTotalPrice(pastryQuantity, pastryDiscCost, pastryCost);
         Console.WriteLine("Your pastry total is ${0}.", pastryPrice);
 
         int subtotal = breadPrice + pastryPrice;
