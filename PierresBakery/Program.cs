@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using Bakery.Loaves;
 using Bakery.Pastries;
 
@@ -6,21 +7,33 @@ namespace Bakery
 {
   public class Program
   {
+
+    Dictionary<string, int> menu = new Dictionary<string, int> 
+    {
+      {"challah", 5}, {"ciabatta", 6}, {"swissRoll", 8}, {"discBread", 0}, 
+      {"danish", 2}, {"croissant", 2}, {"bun", 4}, {"discPastry", 1}, {"discBun", 2}
+    };
     public static void Main()
     {
       Console.WriteLine("Welcome to Pierre's Bakery!");
       Console.WriteLine("• • • • •");
       Console.WriteLine("TODAY'S MENU");
       Console.WriteLine("• • • • •");
-      Console.WriteLine("Loaf of Bread.........................$5/each");
+      Console.WriteLine("Honey Challah...................$5/loaf");
+      Console.WriteLine("Olive Ciabatta..................$6/loaf");
+      Console.WriteLine("Swiss Roll......................$8/loaf");
       Console.WriteLine("Daily Special: Buy 2 loaves, get 1 free!");
       Console.WriteLine("• • •");
-      Console.WriteLine("Pastry................................$2/each");
+      Console.WriteLine("Cheese Danish...................$2/each");
+      Console.WriteLine("Morning Bun.....................$4/each");
+      Console.WriteLine("Chocolate Croissant.............$2/each");
       Console.WriteLine("Daily Special: Buy 2 pastries, get 1 50% off!");
       Console.WriteLine("• • •");
       Console.WriteLine("Would you like to purchase any baked goods today? (Y/N)");
       string userResponse = Console.ReadLine();
       userResponse.ToUpper();
+
+
       int breadCost = 5;
       int breadDiscCost = 0;
       int pastryCost = 2;
