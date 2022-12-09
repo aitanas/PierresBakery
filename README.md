@@ -19,14 +19,15 @@ This application was primarily created for Test-Driven Development practice usin
 
 ## Setup/Installation Requirements
 
-##### You will need the following installed on your machine:
+#### You will need the following installed on your machine:
 * [.NET SDK](https://dotnet.microsoft.com/en-us/download/dotnet/6.0)
 
 To view this project, clone this repository by pasting the following command into your terminal:
 ```
 git clone https://github.com/aitanas/PierresBakery.git
 ```
-**Directions after cloning are as follows:**
+
+#### Directions after cloning are as follows:**
 1. Open the `PierresBakery` directory within your command line.
 2. Use `cd PierresBakery` to navigate to the main program folder.
 3. Run the project with `dotnet run`.
@@ -38,7 +39,7 @@ git clone https://github.com/aitanas/PierresBakery.git
 
 ## License
 
-**MIT License**
+#### MIT License
 
 Copyright (c) 2022 Alex Johnson, Brian Noh, Aitana Shough, Anton Chumachenko, Daniel Yakovlev, Vera Weikel
 
