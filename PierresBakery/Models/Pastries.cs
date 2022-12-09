@@ -1,6 +1,6 @@
-namespace Bakery.Bread
+namespace Bakery.Pastries
 {
-  public class Bread
+  public class Pastry
   {
     // properties, constructors, methods, etc. go here
   }
