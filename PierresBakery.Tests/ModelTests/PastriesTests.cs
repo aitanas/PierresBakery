@@ -9,7 +9,7 @@ namespace Bakery.Tests
     [TestMethod]
     public void PastryConstructor_CreateInstanceOfPastry_Object()
     {
-      Pastry croissant = new Pastry();
+      Pastry croissant = new Pastry(5);
       Assert.AreEqual(typeof(Pastry), croissant.GetType());
     }
 

@@ -5,9 +5,9 @@ namespace Bakery.Pastries
     public int Price;
     public int Quantity;
 
-    public Pastry()
+    public Pastry(int quantity)
     {
-      
+      Quantity = quantity;
     }
   }
 }
