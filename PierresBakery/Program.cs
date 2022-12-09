@@ -21,10 +21,39 @@ namespace Bakery
       Console.WriteLine("• • •");
       Console.WriteLine("Would you like to purchase any baked goods today? (Y/N)");
       string userResponse = Console.ReadLine();
-      
+      userResponse.ToUpper();
+
+      if (userResponse.Contains("Y"))
+      {
+        Console.WriteLine("How many loaves of bread would you like?");
+        string strBreadQuantity = Console.ReadLine();
+        int breadQuantity = int.Parse(strBreadQuantity);
+        Bread breadOrder = new Bread(breadQuantity);
+        int breadPrice = breadOrder.GetBreadPrice(breadQuantity);
+        Console.WriteLine("Your bread total is ${0}.", breadPrice);
+        
+        Console.WriteLine("How many pastries would you like?");
+        string strPastryQuantity = Console.ReadLine();
+        int pastryQuantity = int.Parse(strPastryQuantity);
+        Pastry pastryOrder = new Pastry(pastryQuantity);
+        int pastryPrice = pastryOrder.GetPastryPrice(pastryQuantity);
+        Console.WriteLine("Your pastry total is ${0}.", pastryPrice);
+
+        int subtotal = breadPrice + pastryPrice;
+        Console.WriteLine("Your final total is ${0}.", subtotal);
+        Console.WriteLine("Thank you for stopping by! Please come again soon!");
+      }
+      else if (userResponse.Contains("N"))
+      {
+        Console.WriteLine("Thank you for stopping by! Please come again soon!");
+      }
+      else
+      {
+        Console.WriteLine("Sorry, what was that? Please try again!");
+        Main();
+      }
+      }
 
     }
 
   }
-
-}
