@@ -8,6 +8,12 @@ namespace Bakery.Pastries
     public Pastry(int quantity)
     {
       Quantity = quantity;
+      Price = GetPastryPrice(quantity);
+    }
+
+    public int GetPastryPrice(int quantity)
+    {
+      return 9;
     }
   }
 }
