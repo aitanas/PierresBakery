@@ -27,8 +27,7 @@ namespace Bakery
 
       if (userResponse.Contains("Y"))
       {
-        BreadOrder();
-        PastryOrder();
+        BakeryOrder();
       }
       else if (userResponse.Contains("N"))
       {
@@ -39,7 +38,7 @@ namespace Bakery
         Console.WriteLine("Sorry, invalid response.");  
       }
     }
-      public static int BreadOrder()
+      public static void BakeryOrder()
       {
         Console.WriteLine("What kind of bread would you like today? Please select using the corresponding numbers on the left.");
         Console.WriteLine("(0) No bread for me, thanks!");
@@ -47,40 +46,31 @@ namespace Bakery
         Console.WriteLine("(2) Swiss Roll......................$5/loaf");
         Console.WriteLine("Daily Special: Buy 2 loaves, get 1 free!");
         string breadSelection = Console.ReadLine();
+        int breadQuantity = 0;
 
         if (int.Parse(breadSelection) > 0)
         {
           Console.WriteLine("How much bread would you like?");
           string strBreadQuantity = Console.ReadLine();
-          int breadQuantity = int.Parse(strBreadQuantity);
-          return breadQuantity;
+          breadQuantity = int.Parse(strBreadQuantity);
         }
-        else
-        { 
-          return 0;
-        }
-      }
 
-      public static int PastryOrder()
-      {
         Console.WriteLine("What kind of pastry would you like today? Please select using the corresponding numbers on the left.");
         Console.WriteLine("(0) No pastries for me, thanks!");
         Console.WriteLine("(1) Cheese Danish...................$2/each");
         Console.WriteLine("(2) Morning Bun.....................$2/each");
         Console.WriteLine("Daily Special: Buy 2 pastries, get 1 50% off!");
         string pastrySelection = Console.ReadLine();
+        int pastryQuantity = 0;
 
         if (int.Parse(pastrySelection) > 0)
         {
           Console.WriteLine("How many pastries would you like?");
           string strPastryQuantity = Console.ReadLine();
-          int pastryQuantity = int.Parse(strPastryQuantity);
-          return pastryQuantity;
+          pastryQuantity = int.Parse(strPastryQuantity);
         }
-        else
-        {
-          return 0;
-        }
+
+        OrderTotal(breadQuantity, pastryQuantity);
       }
     
       public static void OrderTotal(int breadQuantity, int pastryQuantity)
