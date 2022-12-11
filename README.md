@@ -27,11 +27,16 @@ To view this project, clone this repository by pasting the following command int
 git clone https://github.com/aitanas/PierresBakery.git
 ```
 
-#### Directions after cloning are as follows:**
+#### Directions after cloning are as follows:
 1. Open the `PierresBakery` directory within your command line.
 2. Use `cd PierresBakery` to navigate to the main program folder.
 3. Run the project with `dotnet run`.
 4. Enjoy!
+
+#### To run the MSTests written for this program:
+1. Open the `PierresBakery` directory within your command line.
+2. Navigate to the tesing folder using `cd PierresBakery.Tests'.
+3. Run the tests with `dotnet test`.
 
 ## Known Bugs
 
